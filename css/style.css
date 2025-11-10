@@ -327,10 +327,19 @@ footer {
     .hero,
     .split {
         grid-template-columns: 1fr;
+        justify-items: center; /* center children within grid area */
     }
     /* center single-column hero cards on tablet/phone */
     .hero .hero-card,
     .hero > aside > div {
+        width: 100%;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* also constrain split contact card to match width */
+    .split > aside > div,
+    .split .about {
         width: 100%;
         max-width: 680px;
         margin-left: auto;
