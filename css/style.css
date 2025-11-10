@@ -341,23 +341,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /* center header/logo on phones */
-    header {
-        justify-content: center;
-    }
-
-    .logo {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logo-text {
-        align-items: center;
-    }
-
-    .tag {
-        text-align: center;
-    }
+    /* keep header/brand left-aligned on phones for consistent alignment */
+    header { justify-content: flex-start; }
+    .logo { justify-content: flex-start; text-align: left; }
+    .logo-text { align-items: flex-start; }
+    .tag { text-align: left; }
 
     .logo img {
         width:56px;
