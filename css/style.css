@@ -130,7 +130,8 @@ nav a {
 }
 
 .stats {
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
     gap:12px;
     margin-top:18px;
 }
