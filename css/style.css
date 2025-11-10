@@ -385,23 +385,23 @@ footer {
     .hero,
     .split {
         grid-template-columns: 1fr;
-        justify-items: center; /* center children within grid area */
+        justify-items: stretch; /* make children span full container width */
     }
-    /* center single-column hero cards on tablet/phone */
+    /* ensure hero cards fill the line like other sections */
     .hero .hero-card,
     .hero > aside > div {
         width: 100%;
-        max-width: 680px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
     }
-    /* also constrain split contact card to match width */
+    /* ensure split section cards also fill container width */
     .split > aside > div,
     .split .about {
         width: 100%;
-        max-width: 680px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
     }
     .services {
         grid-template-columns: repeat(2, 1fr);
