@@ -387,6 +387,12 @@ footer {
         grid-template-columns: 1fr;
         justify-items: stretch; /* make children span full container width */
     }
+    /* ensure the direct grid items stretch full width (Safari quirk) */
+    .hero > *,
+    .split > * {
+        justify-self: stretch;
+        width: 100%;
+    }
     /* ensure hero cards fill the line like other sections */
     .hero .hero-card,
     .hero > aside > div {
