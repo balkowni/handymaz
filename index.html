@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
+    <!-- Your external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
     <header>
         <div class="brand">
             <div class="logo">
+                <!-- place your logo here: assets/handymaz-logo-transparent.png -->
                 <img src="assets/handymaz-logo-transparent.png" alt="HandyMaz logo">
                 <div>
                     <h1>HandyMaz</h1>
@@ -80,12 +81,65 @@
 
     <!-- SERVICES -->
     <section id="services" class="services">
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">🪚</div><div><h3>Carpentry & Framing</h3><div style="font-size:13px;color:#617185">Custom trim, shelving, doors, and small framing jobs.</div></div></div></div>
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">⚡</div><div><h3>Electrical & Lighting</h3><div style="font-size:13px;color:#617185">Fixture installs, switches, outlet additions, basic troubleshooting.</div></div></div></div>
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">🚰</div><div><h3>Plumbing Repairs</h3><div style="font-size:13px;color:#617185">Faucet repairs, minor leaks, toilet servicing, and fixture swaps.</div></div></div></div>
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">🎨</div><div><h3>Painting & Drywall</h3><div style="font-size:13px;color:#617185">Patch, paint, texture matching, and small drywall replacements.</div></div></div></div>
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">🔧</div><div><h3>General Maintenance</h3><div style="font-size:13px;color:#617185">Door adjustments, hardware swaps, furniture assembly, odd jobs.</div></div></div></div>
-        <div class="service"><div style="display:flex;gap:12px;align-items:center"><div class="icon">🧰</div><div><h3>Property Turnover</h3><div style="font-size:13px;color:#617185">Move-in/out prep, quick repairs, and touch-ups for rentals.</div></div></div></div>
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">🪚</div>
+                <div>
+                    <h3>Carpentry & Framing</h3>
+                    <div style="font-size:13px;color:#617185">Custom trim, shelving, doors, and small framing jobs.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">⚡</div>
+                <div>
+                    <h3>Electrical & Lighting</h3>
+                    <div style="font-size:13px;color:#617185">Fixture installs, switches, outlet additions, basic troubleshooting.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">🚰</div>
+                <div>
+                    <h3>Plumbing Repairs</h3>
+                    <div style="font-size:13px;color:#617185">Faucet repairs, minor leaks, toilet servicing, and fixture swaps.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">🎨</div>
+                <div>
+                    <h3>Painting & Drywall</h3>
+                    <div style="font-size:13px;color:#617185">Patch, paint, texture matching, and small drywall replacements.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">🔧</div>
+                <div>
+                    <h3>General Maintenance</h3>
+                    <div style="font-size:13px;color:#617185">Door adjustments, hardware swaps, furniture assembly, odd jobs.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div style="display:flex;gap:12px;align-items:center">
+                <div class="icon">🧰</div>
+                <div>
+                    <h3>Property Turnover</h3>
+                    <div style="font-size:13px;color:#617185">Move-in/out prep, quick repairs, and touch-ups for rentals.</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROJECTS CAROUSEL -->
@@ -118,25 +172,58 @@
     </section>
 
     <!-- ABOUT + CONTACT -->
-    <section class="split">
+    <section class="split" id="contact">
         <div class="about">
             <h2 style="font-family:'Montserrat',sans-serif;margin-top:0">About HandyMaz</h2>
-            <img src="https://images.unsplash.com/photo-1590086782795-6f0cb74f3d29?q=80&w=400&auto=format&fit=crop" alt="Maz photo">
+            <img src="https://images.unsplash.com/photo-1590086782795-6f0cb74f3d29?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Maz photo">
             <p style="color:#4f6576">Hi — I’m Maz, the owner of HandyMaz. I started this business to bring reliable, honest, and skillful handyman services to my neighborhood. I treat every home like it’s my own — clean work area, transparent pricing, and a job done right the first time.</p>
+
+            <h4 style="margin-top:18px">Why choose HandyMaz?</h4>
+            <ul style="color:#4f6576">
+                <li>Licensed & insured</li>
+                <li>Upfront quotes and no-surprise pricing</li>
+                <li>Fast communication and punctual arrival</li>
+            </ul>
+
+            <div style="margin-top:14px"><strong>Areas served:</strong> (List cities/zip codes)</div>
         </div>
 
-        <aside id="contact" style="align-self:start">
-            <div style="background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(26,41,66,0.04)">
+        <aside style="align-self:start">
+            <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(26,41,66,0.04)">
                 <h3 style="margin-top:0">Request a free estimate</h3>
-                <form>
+                <form onsubmit="event.preventDefault();alert('Thanks! We\'ll get back to you shortly.');this.reset();">
                     <div class="field"><label>Name</label><input required placeholder="Your name"></div>
                     <div class="field"><label>Phone or Email</label><input required placeholder="Phone or email"></div>
                     <div class="field"><label>Service needed</label><input placeholder="e.g. faucet repair, drywall patch"></div>
                     <div class="field"><label>Message</label><textarea placeholder="Give a few details (optional)"></textarea></div>
                     <button class="btn btn-primary" type="submit" style="width:100%">Send Request</button>
                 </form>
+
+                <div style="margin-top:14px;font-size:13px;color:#6b7b8f">Prefer a faster response? Call or text <strong>(949) 561-0878</strong>.</div>
             </div>
         </aside>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" style="margin-top:18px">
+        <h3 style="font-family:'Montserrat',sans-serif;margin-bottom:12px">Customer Reviews</h3>
+        <div class="reviews">
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div style="font-weight:700;margin-top:8px">Great work — fixed a leaky pipe fast</div>
+                <div style="font-size:13px;color:#617185;margin-top:8px">Maz was on time, professional, and left the place cleaner than he found it. Highly recommend.</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div style="font-weight:700;margin-top:8px">Excellent trim & shelving</div>
+                <div style="font-size:13px;color:#617185;margin-top:8px">Precision carpentry and fair pricing. Will hire again.</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★☆</div>
+                <div style="font-weight:700;margin-top:8px">Quick and reliable</div>
+                <div style="font-size:13px;color:#617185;margin-top:8px">Handled several small jobs in one visit. Communication was great.</div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -150,11 +237,11 @@
     </footer>
 </div>
 
-<script src="main.js"></script>
 <script>
+    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // carousel script
+    // carousel
     (function(){
         const slides = document.querySelectorAll('.carousel-track img');
         const dots = document.querySelectorAll('.carousel-dots .dot');
@@ -172,9 +259,11 @@
 
         prev.addEventListener('click', ()=> showSlide(current - 1));
         next.addEventListener('click', ()=> showSlide(current + 1));
-        dots.forEach(dot => dot.addEventListener('click', ()=> showSlide(parseInt(dot.dataset.slide))));
+        dots.forEach(dot => {
+            dot.addEventListener('click', ()=> showSlide(parseInt(dot.dataset.slide)));
+        });
 
-        // optional auto-slide every 5s
+        // optional auto-slide
         setInterval(()=> showSlide(current + 1), 5000);
     })();
 </script>
