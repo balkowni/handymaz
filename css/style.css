@@ -253,7 +253,7 @@ footer {
     overflow: hidden;
     border-radius: 18px;
     background: #e9edf3;
-    min-height: 520px;          /* doubled height */
+    min-height: 520px;          /* taller on desktop */
 }
 
 .carousel-track img {
@@ -327,10 +327,26 @@ footer {
     .services {
         grid-template-columns: 1fr;
     }
+
+    /* center header/logo on phones */
+    header {
+        justify-content: center;
+    }
+
+    .logo {
+        justify-content: center;
+        text-align: center;
+    }
+
     .logo img {
         width:56px;
-        height:56px;
+        height:auto;
     }
+
+    .tag {
+        text-align: center;
+    }
+
     .headline {
         font-size:26px;
     }
