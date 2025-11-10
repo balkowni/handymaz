@@ -328,6 +328,14 @@ footer {
     .split {
         grid-template-columns: 1fr;
     }
+    /* center single-column hero cards on tablet/phone */
+    .hero .hero-card,
+    .hero > aside > div {
+        width: 100%;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .services {
         grid-template-columns: repeat(2, 1fr);
     }
