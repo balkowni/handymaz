@@ -30,8 +30,8 @@ header {
 }
 
 .logo-img {
-    width: 64px;
-    height: 64px;
+    width: 90px;        /* was 64px */
+    height: 90px;
     border-radius: 10px;
     object-fit: contain;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -96,6 +96,7 @@ nav a {
     margin-bottom: 10px;
 }
 
+/* old gallery (you can keep it if you use it elsewhere) */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -138,4 +139,95 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 40px;
+}
+
+/* ============================
+   PROJECTS CAROUSEL
+   ============================ */
+.projects-carousel {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e9edf3;
+    min-height: 400px;
+}
+
+.carousel-track img {
+    width: 100%;
+    display: none;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.carousel-track img.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 41, 66, 0.85);
+    color: #fff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn.prev {
+    left: 14px;
+}
+
+.carousel-btn.next {
+    right: 14px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #c8d0db;
+    cursor: pointer;
+    transition: width 0.2s ease, background 0.2s ease;
+}
+
+.carousel-dots .dot.active {
+    background: #F57C00;
+    width: 22px;
+}
+
+@media (max-width: 720px) {
+    .carousel-track {
+        min-height: 300px;
+    }
+
+    .logo-img {
+        width: 78px;
+        height: 78px;
+    }
 }

@@ -50,10 +50,6 @@
         .service h3{margin:6px 0 10px}
         .icon{width:46px;height:46px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--navy),#2b3f63);color:white;font-weight:700}
 
-        /* Gallery */
-        .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
-        .gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px}
-
         /* About & Contact */
         .split{display:grid;grid-template-columns:1fr 420px;gap:20px;margin-top:30px}
         .about{background:linear-gradient(180deg,#fff,#fcfeff);padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(26,41,66,0.04)}
@@ -70,17 +66,80 @@
 
         footer{padding:26px 0;margin-top:36px;border-top:1px solid #e6eef6;color:#546877}
 
+        /* PROJECTS CAROUSEL */
+        .projects-carousel {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        .carousel-track {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #e9edf3;
+            min-height: 400px;
+        }
+        .carousel-track img {
+            width: 100%;
+            display: none;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+        .carousel-track img.active {
+            display: block;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 41, 66, 0.85);
+            color: #fff;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-btn.prev { left: 14px; }
+        .carousel-btn.next { right: 14px; }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .carousel-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #c8d0db;
+            cursor: pointer;
+            transition: width 0.2s ease, background 0.2s ease;
+        }
+        .carousel-dots .dot.active {
+            background: #F57C00;
+            width: 22px;
+        }
+
         @media (max-width:980px){
             .hero,.split{grid-template-columns:1fr}
             .services{grid-template-columns:repeat(2,1fr)}
-            .gallery{grid-template-columns:repeat(2,1fr)}
             nav a{display:none}
         }
         @media (max-width:560px){
             .services{grid-template-columns:1fr}
-            .gallery{grid-template-columns:1fr}
             .logo img{width:56px;height:56px}
             .headline{font-size:26px}
+            .carousel-track{min-height:300px;}
         }
     </style>
 </head>
@@ -90,8 +149,7 @@
         <div class="brand">
             <div class="logo">
                 <!-- place your logo here: assets/handymaz-logo-transparent.png -->
-                <img src="assets/handymaz-logo-transparent.png"
-                     alt="HandyMaz logo">
+                <img src="assets/handymaz-logo-transparent.png" alt="HandyMaz logo">
                 <div>
                     <h1>HandyMaz</h1>
                     <div class="tag">Repair. Install. Renovate.</div>
@@ -132,7 +190,6 @@
                     <div style="font-size:12px;color:#718699">Satisfaction guarantee</div>
                 </div>
             </div>
-
         </div>
 
         <!-- Quick contact card -->
@@ -217,14 +274,33 @@
         </div>
     </section>
 
-    <!-- PROJECT GALLERY -->
-    <section id="projects" class="gallery" aria-label="Project gallery">
-        <img src="assets/project1.jpg" alt="Cabinet installation">
-        <img src="assets/project2.jpg" alt="Laundry Room Reno">
-        <img src="assets/project3.jpg" alt="Living Room Reno">
-        <img src="assets/project4.jpg" alt="Bathroom sink installation">
-        <img src="assets/project5.jpg" alt="Kitchen island lighting">
-        <img src="assets/project6.jpg" alt="Bathroom mirror installation">
+    <!-- PROJECTS CAROUSEL -->
+    <section id="projects" class="projects-carousel" aria-label="Project gallery">
+        <h2 style="margin-bottom:14px;font-family:'Montserrat',sans-serif;">Recent Projects</h2>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" aria-label="Previous project">‹</button>
+
+            <div class="carousel-track">
+                <img src="assets/project1.jpg" alt="Cabinet installation" class="active">
+                <img src="assets/project2.jpg" alt="Laundry Room Reno">
+                <img src="assets/project3.jpg" alt="Living Room Reno">
+                <img src="assets/project4.jpg" alt="Bathroom sink installation">
+                <img src="assets/project5.jpg" alt="Kitchen island lighting">
+                <img src="assets/project6.jpg" alt="Bathroom mirror installation">
+            </div>
+
+            <button class="carousel-btn next" aria-label="Next project">›</button>
+        </div>
+
+        <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+        </div>
     </section>
 
     <!-- ABOUT + CONTACT -->
@@ -247,7 +323,7 @@
         <aside id="contact" style="align-self:start">
             <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(26,41,66,0.04)">
                 <h3 style="margin-top:0">Request a free estimate</h3>
-                <form onsubmit="event.preventDefault();alert('Thanks! We\\'ll get back to you shortly.');this.reset();">
+                <form onsubmit="event.preventDefault();alert('Thanks! We\'ll get back to you shortly.');this.reset();">
                     <div class="field"><label>Name</label><input required placeholder="Your name"></div>
                     <div class="field"><label>Phone or Email</label><input required placeholder="Phone or email"></div>
                     <div class="field"><label>Service needed</label><input placeholder="e.g. faucet repair, drywall patch"></div>
@@ -294,7 +370,34 @@
 </div>
 
 <script>
+    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // carousel
+    (function(){
+        const slides = document.querySelectorAll('.carousel-track img');
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        const prev = document.querySelector('.carousel-btn.prev');
+        const next = document.querySelector('.carousel-btn.next');
+        let current = 0;
+
+        function showSlide(idx){
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (idx + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        prev.addEventListener('click', ()=> showSlide(current - 1));
+        next.addEventListener('click', ()=> showSlide(current + 1));
+        dots.forEach(dot => {
+            dot.addEventListener('click', ()=> showSlide(parseInt(dot.dataset.slide)));
+        });
+
+        // optional auto-slide
+        setInterval(()=> showSlide(current + 1), 5000);
+    })();
 </script>
 </body>
 </html>
