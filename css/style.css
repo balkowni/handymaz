@@ -384,9 +384,14 @@ footer {
 @media (max-width: 980px) {
     .hero,
     .split {
-        grid-template-columns: 1fr;
-        justify-items: stretch; /* make children span full container width */
+        /* switch to block stacking to avoid iOS grid width quirks */
+        display: block;
     }
+    .hero > * + *,
+    .split > * + * { margin-top: 20px; }
+    /* keep previous intent: children should span full container width */
+    .hero { justify-items: stretch; }
+    .split { justify-items: stretch; }
     /* ensure the direct grid items stretch full width (Safari quirk) */
     .hero > *,
     .split > * {
