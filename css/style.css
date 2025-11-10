@@ -253,12 +253,12 @@ footer {
     overflow: hidden;
     border-radius: 18px;
     background: #e9edf3;
-    min-height: 260px; /* smaller size */
+    min-height: 520px;          /* doubled height */
 }
 
 .carousel-track img {
     width: 100%;
-    height: 260px; /* controlled image height */
+    height: 520px;              /* match container */
     object-fit: cover;
     display: none;
     border-radius: 18px;
@@ -334,10 +334,12 @@ footer {
     .headline {
         font-size:26px;
     }
+
+    /* slightly smaller carousel for phones */
     .carousel-track {
-        min-height: 200px;
+        min-height: 400px;
     }
     .carousel-track img {
-        height: 200px;
+        height: 400px;
     }
 }
